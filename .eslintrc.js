@@ -3,9 +3,6 @@ module.exports = {
     es2021: true,
     node: true
   },
-  globals: [
-    'use'
-  ],
   extends: [
     'standard'
   ],
@@ -14,5 +11,9 @@ module.exports = {
     sourceType: 'module'
   },
   rules: {
+    semi: ['error', 'never']
+  },
+  globals: {
+    use: true
   }
 }
