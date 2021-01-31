@@ -1,0 +1,15 @@
+<strong>Fala {{email}}, beleza?</strong>
+
+<p>A seguinte tarefa foi atribuída à você:</p>
+<p>
+  <strong>ID: </strong> {{id}}<br>
+  <strong>Título: </strong> {{title}}<br>
+  @if(description)
+    <strong>Descrição: </strong><br>
+    {{description}}
+  @endif
+</p>
+
+@if(hasAttachment)
+  <p>Verifique o anexo para mais detalhes.</p>
+@endif
