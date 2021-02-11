@@ -3,6 +3,7 @@
 const Env = use('Env')
 const Youch = use('youch')
 const BaseExceptionHandler = use('BaseExceptionHandler')
+const sentry = use('Sentry')
 
 /**
  * This class handles all exceptions thrown during
@@ -47,7 +48,7 @@ class ExceptionHandler extends BaseExceptionHandler {
    * @return {void}
    */
   async report (error, { request }) {
-    console.log(error)
+    sentry.captureException(error)
   }
 }
 
